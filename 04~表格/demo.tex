@@ -1,0 +1,64 @@
+% % 导言区
+% \documentclass{ctexart}
+% % \usepackage{ctex}
+% \usepackage{graphicx}
+% \graphicspath{{figures/},{pics/..}} % 图片在当前目录下的 figures 目录
+% % 正文区
+% \begin{document}
+%     在\LaTeX{}中的插图
+%     \begin{figure}
+%         \centering
+%         \caption{\TeX 系统的吉祥物----小狮子 }
+%         \includegraphics[scale=0.3]{123.jpg}
+%     \end{figure}
+
+%     在\LaTeX{}中的表格
+%     \begin{table}
+%         \centering
+%         \caption{考试成绩表}
+%         \begin{tabular}{|r||r|r|r|cr|}
+%             \hline
+%           姓名 & 语文 & 数学 & 英语 & 备注 & \\
+%           \hline \hline
+%           张三 & 87 & 100 & 95 & 优秀 & \\
+%           \hline
+%           李四 & 45 & 56 & 23 & 补考另行通知 & \\
+%           \hline
+%           王二 & 23 & 89 & 87 & &\\   
+%           \hline
+%         \end{tabular}
+%     \end{table}
+% \end{document}
+
+\documentclass[UTF8]{ctexart}
+
+\begin{document}
+
+\begin{tabular}{|l|c|r|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  左列 & 中列 & 右列 \\
+  \hline
+  2行1列 & 2行2列 & 2行3列 \\
+  \hline
+  3行1列 & 3行2列 & 3行3列 \\
+  \hline
+  4行1列 & 4行2列 & 4行3列 \\
+  \hline
+
+
+  \\
+  % 跨越列 \multicolumn 命令的第一个参数指明要横跨的列数，第二个参数指明对齐和边框线，第三个参数指明该单元格的内容
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  左列 & 中列 & 右列 \\
+  \hline
+  2行1列 & 2行2列 & 2行3列 \\
+  \hline
+  \multicolumn{2}{|c|}{跨越2015} & 3行3列 \\
+  \hline
+  4行1列 & 4行2列 & 4行3列 \\
+  \hline
+\end{tabular}
+
+\end{document}

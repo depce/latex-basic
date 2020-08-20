@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{name2}
+作者.
+\newblock {\em 书名}.
+\newblock 出版社名称, 年份2008.
+
+\bibitem{name1}
+多个作者用 作者 and 连接.
+\newblock 标题.
+\newblock {\em 期刊名}, 卷20(页码), 年份.
+
+\end{thebibliography}
