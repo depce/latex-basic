@@ -1,0 +1,108 @@
+% 导言区
+\documentclass{ctexart}
+\usepackage{ctex}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage[linesnumbered,boxed,ruled,commentsnumbered]{algorithm2e}
+\usepackage{bm}
+\usepackage{lmodern} % 改用全套的 Latin Modern 字体 防止出现字体信息报错
+
+
+\begin{document}
+\title{我的第一个\LaTeX{}文档}
+\author{卢佳兴}
+\maketitle
+    \section{符号}
+    年后你好 \quad 你~好
+
+    \lstset{language=C,flexiblecolumns,escapechar='} % 设置为逃逸字符
+    \begin{lstlisting}
+        int n; // '一个整数'
+    \end{lstlisting}
+
+    \begin{tabbing}
+        格式\hspace{3em} \= 作者 \\
+        Plain   \TeX \> 高德纳 \\
+        \LaTeX  \> leslie lamport
+    \end{tabbing}
+
+
+    \section{例子}
+    \begin{tabbing}
+        算法：在序列$A$中对$x$做二分检索 \\
+        输入：$A$，$x$及下标上下界 $L$, $H$ \\
+        % \qquad\=\+\kw{integer} $L,H,M,j$ \\
+    \end{tabbing}
+
+    \subsection{脚注}
+    \begin{tabular}{|r|r|}
+        自变量 & 因变量\footnotemark \\ \hline
+        $x$ & $y$
+    \end{tabular}
+    \footnotetext{$y=x^2$}
+    \section{节标题}{节标题\protect\footnote{标题中的脚注}}
+    % $\cfrac{1}{2}\|\bm{\beta}\|^2+\cfrac{c}{2}\|\bm{\xi}\|^2$
+    % $\frac{1}{2}\|\bm{\beta}\|^2+\frac{c}{2}\|\bm{\xi}\|^2$
+    \tableofcontents
+    \begin{table}[!ht]
+        \tabcolsep=10pt
+        \centering
+        \caption{The data sets for clustering}
+        \begin{tabular}{c c c c}
+        \hline
+        \hline
+        Datasets & Cluster & Dimension & Sample size\\ \hline
+        IRIS	 & 3	   &   4	   &   150\\
+        WINE	 & 3	   &   13	   &   178\\ \hline
+        \hline
+        \end{tabular}
+        \label{tab:1}
+    \end{table}
+        \IncMargin{1em} % 使得行号不向外突出
+    \begin{algorithm}
+
+        \SetAlgoNoLine % 不要算法中的竖线
+        \SetKwInOut{Input}{\textbf{Input}}\SetKwInOut{Output}{\textbf{Output}} % 替换关键词
+
+        \Input{
+            \\
+            The observed user-item pair set $S$\;\\ % \; 区分一行结束
+            The feature matrix of items $F$\;\\
+            The content features entities $A := \{A^u,A^v\}$\;\\}
+        \Output{
+            \\
+            $\Theta \  := \{Y^u,Y^v\}$\;\\
+            $W := \{W^u,W^v\}$\;\\}
+        \BlankLine
+
+        initialize the model parameter $\Theta$ and $W$ with uniform $\left(-\sqrt{6}/{k},\sqrt{6}/{k}\right)$\; 
+        standarized $\Theta$\;
+        Initialize the popularity of categories $\rho$ randomly\;
+        \Repeat
+            {\text{convergence}}
+            {Draw a triple $\left(m,i,j\right)$\;
+                \For {each latent vector $\theta \in \Theta$}{
+                    $\theta \leftarrow \theta - \eta\frac{\partial L}{\partial \theta}$
+                }
+                \For {each $W^e \in W$}{
+                    Update $W^e$ with the rule defined in Eq.2\;
+                }
+            }
+        \caption{Learning paramters for BPR\label{al3}}
+    \end{algorithm}
+    \DecMargin{1em}
+
+    \begin{align}
+        W_{ij}&=
+        \begin{cases}
+        \cfrac{\omega_{ij}}{N_{c_i}} & c_i=c_j \\
+                0                   & otherwise
+        \end{cases}\\
+        W_{ij}^p&=
+        \begin{cases}
+        \omega_{ij}(\cfrac{1}{N}-\cfrac{1}{N_{c_i}}) & c_i=c_j\\
+        \cfrac{1}{N}                                & otherwise
+        \end{cases}
+    \end{align}
+  
+\end{document}

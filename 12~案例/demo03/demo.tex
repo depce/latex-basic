@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{ctexcap} % 是过时宏包。
+\usepackage{amsmath} % AMS 数学公式扩展
+\usepackage{graphicx} % 插入图片宏包
+\usepackage{fancyhdr} % 设置latex页眉页角
+\usepackage[super,square,comma,sort&compress]{natbib} % 设置參考文献的格式 角标直接在该文件中书写
+
+\usepackage{geometry} % 设置页边距
+\geometry{left=4cm,right=2cm,top=3cm,bottom=2cm} % 分别是左右上下
+
+\newcommand{\tabincell}[2]{
+    \begin{tabular}
+        {@{}#1@{}}#2
+    \end{tabular}}% 设置换行
+
+\graphicspath{{pics/},{figs/}} % 图片在当前目录下的 pics和figs 目录
+
+\usepackage{float} % 是图片悬浮
+\usepackage{bm} % 字体加粗
+\usepackage{times} 
+\usepackage{mathptmx} % 设置为罗马体
+\usepackage{caption} % 可以修改标题
+\captionsetup{labelsep=space}
+%\usepackage[colorlinks,dvipdfm,  %电子版时使用这个包
+%            bookmarksopenlevel=2,
+%            pdfpagemode=UseNone,
+%            pdfstartview=FitB,
+%            linkcolor=black,
+%            citecolor=blue,
+%            linkcolor=black,
+%            hyperindex=true,
+%            pagebackref=true,
+%            CJKbookmarks=true,
+%            colorlinks]{hyperref}
+
+\renewcommand{\captionfont}{\zihao{5}\songti}
+\renewcommand\theequation{\thechapter-\arabic{equation}} % 公式编号
+\usepackage{setspace} % 使用间距宏包
+\usepackage{comment}
+\linespread{1.5} % 1到5章
+
+\CTEXsetup[nameformat]{}
+\CTEXsetup[beforeskip={0pt}]{chapter}
+\CTEXsetup[nameformat={\heiti\zihao{3}\centering}]{chapter}%章标题格式
+\CTEXsetup[titleformat={\heiti\zihao{3}\centering}]{chapter}%章标题格式
+\CTEXsetup[format={\songti\zihao{4}\centering}]{section}% 节标题格式
+\CTEXsetup[format={\songti\zihao{-4}}]{subsection}%小节标题格式
+\CTEXsetup[format={\songti\zihao{-4}}]{subsubsection}%小节标题格式
+\usepackage{titletoc} % 改变章节格式
+
+\begin{document}\songti\zihao{-4}%设置正文字体格式
+
+
+\pagenumbering{Roman} % 页面设置 罗马字体
+
+\include{Abstract}
+\songti\zihao{-4}
+\setcounter{tocdepth}{2}%设置文件夹深度
+\thispagestyle{plain}
+\titlecontents{chapter}
+              [0.0em]
+              {\songti\zihao{-4}\bfseries\addvspace{10bp minus 0bp}}  %\song
+              {\thecontentslabel\hspace{0.5em}}
+              {}
+              {\normalfont\dotfill\textrm{\contentspage[{\bfseries\thecontentspage}]}}
+\newgeometry{bottom=3cm,top=3cm}
+\tableofcontents % 生成一个目录
+\restoregeometry
+
+
+\include{chapter1}  % 第一章
+\chapter{绪论}
+\section{研究背景及意义}
+黑胡椒苦咖啡和哈弗卡积分换看哈复活卡就划分框架啊饿会儿话费发挥咖啡壶碍口发哈扣积分换
+黑胡椒苦咖啡和哈弗卡积分换看哈复活卡就划分框架啊饿会儿话费发挥咖啡壶碍口发哈扣积分换
+黑胡椒苦咖啡和哈弗卡积分换看哈复活卡就划分框架啊饿会儿话费发挥咖啡壶碍口发哈扣积分换
+黑胡椒苦咖啡和哈弗卡积分换看哈复活卡就划分框架啊饿会儿话费发挥咖啡壶碍口发哈扣积分换
+\subsection{无线频谱的分配与利用}
+\subsection{提高频谱利用效率的方法}
+\section{认知无线电概述}
+\subsection{认知无线电的定义}
+\subsection{认知无线电的关键技术}
+\subsection{国内外认知无线电的研究现状}
+\section{论文内容及结构}
+
+%\include{chapter2}
+%\include{chapter3}
+%\include{chapter4}
+%\include{chapter5}
+
+%\include{thanks}
+%\include{appendix}
+%\include{reference}
+
+\end{document}
