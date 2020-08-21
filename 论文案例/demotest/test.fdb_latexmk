@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1597905704 "test.xdv" "test.pdf" "test" 1597905705
+["xdvipdfmx"] 1597905704 "test.xdv" "test.pdf" "test" 1597976742
   "test.xdv" 1597905704 4396 4c398896bcbc092fadc6cd0bc574bb0e "xelatex"
   (generated)
   "test.pdf"
-["xelatex"] 1597905702 "test.tex" "test.xdv" "test" 1597905705
+["xelatex"] 1597905702 "test.tex" "test.xdv" "test" 1597976742
   "c:/Windows/Fonts/msyh.ttc" 1552970651 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "g:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1597032003 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "g:/texlive/2020/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1597032549 520 4889cce2180234b97cad636b6039c722 ""
@@ -47,7 +47,7 @@
   "test.tex" 1597905701 127 1b0a3524d87689ee004a9cab350d11af ""
   "test01.tex" 1597905702 659 e816b6d8328d285cf30d6d1a1f532bf1 ""
   (generated)
-  "test.log"
   "test01.aux"
+  "test.log"
   "test.xdv"
   "test.aux"
