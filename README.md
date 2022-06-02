@@ -1,2 +1,5 @@
-# LaTeX
-# # 大家好，这是我的基础知识代码，希望大家喜欢谢谢
+# LaTeX-study
+
+## 快速开始
+
+xelatex xxx.tex
